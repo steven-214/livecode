@@ -65,6 +65,7 @@ function load_finish(json)
             codeList.push(livecode.code9);
         }
 
+        $(document).attr("title",livecode.title);
 
         mydebug("codeList.length:::"+codeList.length);
 
