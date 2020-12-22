@@ -66,6 +66,7 @@ function load_finish(json)
         }
 
         $(document).attr("title",livecode.title);
+        setWXTitle(livecode.title);
 
         mydebug("codeList.length:::"+codeList.length);
 
@@ -98,6 +99,26 @@ function load_finish(json)
     {
 
     }
+}
+
+function setWXTitle(str)
+{
+    document.setTitle = function(t) {
+        document.title = t;
+        var i = document.createElement('iframe');
+        i.style.display = 'none';
+        i.onload = function() {
+            setTimeout(function(){
+                i.remove();
+            }, 9)
+        }
+        document.body.appendChild(i);
+    }
+
+    setTimeout(function(){
+        document.setTitle(str)
+    }, 1000)
+
 }
 
 
