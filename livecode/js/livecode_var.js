@@ -8,14 +8,14 @@ function loadLiveCode(tag,feedback)
     doApi(getLiveCodeUrl,hash,feedback);
 }
 
-function saveLiveCode(name,val)
+function saveLiveCode(val)
 {
-    localStorage.setItem(name,val);
+    localStorage.setItem("livecode",val);
 }
 
-function getLiveCode(name)
+function getLiveCode()
 {
-    var id = localStorage.getItem(name);
+    var id = localStorage.getItem("livecode");
     return id;
 
 }

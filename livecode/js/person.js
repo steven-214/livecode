@@ -1,9 +1,8 @@
 function load()
 {
-    var tag = getQueryString("tag");
-    if(tag!=null)
+    var str = getLiveCode();
+    if(str!=null)
     {
-        var str = getLiveCode(tag);
         var json = eval('(' + str + ')');
         load_finish(json);
     }
