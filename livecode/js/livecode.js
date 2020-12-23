@@ -2,9 +2,9 @@ load();
 
 function load()
 {
-    var cid = getQueryString("id");
+    var tag = getQueryString("tag");
     // alert("cid:::"+cid);
-    loadLiveCode(cid,load_finish);
+    loadLiveCode(tag,load_finish);
 }
 
 var livecode;
