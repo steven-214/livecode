@@ -18,15 +18,6 @@ function load_finish(json)
 
         var codeList = new Array();
 
-        // mydebug(livecode.code1);
-        // mydebug(livecode.code2);
-        // mydebug(livecode.code3);
-        // mydebug(livecode.code4);
-        // mydebug(livecode.code5);
-        // mydebug(livecode.code6);
-        // mydebug(livecode.code7);
-        // mydebug(livecode.code8);
-
 
         if(livecode.code1!=null)
         {
