@@ -22,11 +22,11 @@ function load_finish(json)
         {
             if(livecode.advance==0)
             {
-                window.location.href = ("./qun.html?tag="+tag);
+                window.location.href = ("./person.html?tag="+tag);
             }
             else
             {
-                window.location.href = ("./qunadvance.html?tag="+tag);
+                window.location.href = ("./qun.html?tag="+tag);
             }
         }
     }
