@@ -7,37 +7,146 @@
     <link rel="stylesheet" href="../lib/layui/css/layui.css"/>
 
     <style>
-        .successTip
+        body{
+            background: lightgray;
+        }
+
+        .livecode_cover
         {
             display: flex;
+            width: 100%;
+            height: 300px;
+            background: gray;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-position:  center, center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 300px;
+        }
+
+        .livecode_slogan
+        {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background: white;
+            text-align: center;
+            /*justify-content: center;*/
+            align-items: center;
+            color: #323232;
+            padding-left: 10px;
+        }
+
+        .livecode_member
+        {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background: white;
+            text-align: center;
+            /*justify-content: center;*/
+            align-items: center;
+            color: #323232;
+        }
+
+        .livecode_content
+        {
+            display: flex;
+            width: 100%;
+            background: white;
+            text-align: center;
+            /*justify-content: center;*/
+            align-items: center;
+            color: #323232;
+            padding-left: 10px;
+        }
+
+        .livecode_detail
+        {
+            width: 100%;
+            background: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: #323232;
+            padding-left: 10px;
+        }
+
+
+
+
+
+
+
+        .nav_bar
+        {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-overflow-scrolling: touch;
+            filter: alpha(opacity=60);
+            background-color: rgba(255, 255, 255, 0.6);
+            z-index: 9999;
             width: 100%;
             height: 80px;
-            background: #effdf4;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            color: #1bb953;
-            font-size: 16px;
-        }
 
-        .qrcode
-        {
             display: flex;
-            width: 100%;
             text-align: center;
-            justify-content: center;
             align-items: center;
         }
 
-        .line_info
+        .service_btn
         {
             display: flex;
-            width: 100%;
+            width: 20%;
+            height: 100%;
+            background: white;
             text-align: center;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            color: #323232;
+            padding-left: 10px;
         }
+
+        .join_btn
+        {
+            display: flex;
+            width: 80%;
+            height: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background: #ff4a5b;
+            color: #FFFFFF;
+        }
+
+
+
+        .title_line
+        {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background: white;
+            text-align: center;
+            /*justify-content: center;*/
+            align-items: center;
+            color: #323232;
+            padding-left: 10px;
+        }
+
+
+
+        .empty_line
+        {
+            display: flex;
+            width: 100%;
+            height: 10px;
+        }
+
 
     </style>
 
@@ -45,35 +154,62 @@
 </head>
 <body>
 
-    <div class="successTip">
-        <img src="./img/ok.png" width="30px" height="30px">此二维码通过安全验证，可以放心扫描
+    <div class="livecode_cover" id="livecode_cover">
     </div>
 
-    <div class="qrcode">
-        <img src=""  >
+    <div class="livecode_slogan" id="livecode_slogan">
     </div>
 
-    <div class="line_info">
-        <font color="#969696">二维码下方引导文字</font>
+    <div class="empty_line">
     </div>
 
-    <div class="line_info">
-        <font color="#008eff">联系电话</font>
+    <div class="livecode_member" id="livecode_member">
     </div>
 
-    <div class="line_info">
-        <font color="#FF4A5B" size="10px">13111101112</font>
+    <div class="empty_line">
     </div>
 
-    <div class="line_info">
-        <font color="#969696">XX 提供技术支持</font>
+    <div class="title_line">
+        内容详情
+    </div>
+    <div class="livecode_content" id="livecode_content">
+    </div>
+
+    <div class="empty_line">
+    </div>
+
+    <div class="livecode_detail" id="livecode_detail">
+    </div>
+
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
+    </div>
+    <div class="empty_line">
     </div>
 
 
+    <div class="nav_bar">
+        <div class="service_btn">客服</div>
+        <div class="join_btn">我要入群</div>
+    </div>
 
-    <script src="../lib/layui/layui.js" charset="utf-8"></script>
+
+    <script src="../lib/jquery-2.1.4.js"></script>
     <script src="../lib/util.js" charset="utf-8"></script>
-    <script src="js/person.js" charset="utf-8"></script>
+    <script src="./js/livecode_var.js" charset="utf-8"></script>
+    <script src="./js/qun.js" charset="utf-8"></script>
+
 
 
 </body>

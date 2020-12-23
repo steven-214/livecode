@@ -15,8 +15,8 @@ function saveLiveCode(val)
 
 function getLiveCode()
 {
-    var id = localStorage.getItem("livecode");
-    return id;
+    var str = localStorage.getItem("livecode");
+    return str;
 
 }
 
@@ -64,3 +64,65 @@ function getCodeList(livecode)
 
     return codeList;
 }
+
+function getDetailList(livecode)
+{
+    var codeList = new Array();
+
+    if(livecode.detail1!=null)
+    {
+        codeList.push(livecode.detail1);
+    }
+    if(livecode.detail2!=null)
+    {
+        codeList.push(livecode.detail2);
+    }
+    if(livecode.detail3!=null)
+    {
+        codeList.push(livecode.detail3);
+    }
+    if(livecode.detail4!=null)
+    {
+        codeList.push(livecode.detail4);
+    }
+    if(livecode.detail5!=null)
+    {
+        codeList.push(livecode.detail5);
+    }
+    return codeList;
+}
+
+
+
+function setWXTitle(str)
+{
+    document.setTitle = function(t) {
+        document.title = t;
+        var i = document.createElement('iframe');
+        i.style.display = 'none';
+        i.onload = function() {
+            setTimeout(function(){
+                i.remove();
+            }, 9)
+        }
+        document.body.appendChild(i);
+    }
+
+    setTimeout(function(){
+        document.setTitle(str)
+    }, 1000)
+
+}
+
+
+function callPhone()
+{
+    if(livecode==null)
+    {
+        return;
+    }
+
+    window.location.href = "tel://"+livecode.phone;
+}
+
+
