@@ -115,14 +115,9 @@ function setWXTitle(str)
 }
 
 
-function callPhone()
+function callPhone(phone)
 {
-    if(livecode==null)
-    {
-        return;
-    }
-
-    window.location.href = "tel://"+livecode.phone;
+    window.location.href = "tel://"+phone;
 }
 
 

@@ -4,7 +4,7 @@ function load()
 {
     var str = getLiveCode();
     // alert(str);
-    mydebug("llll:::::::::::"+str);
+    // mydebug("llll:::::::::::"+str);
     if(str!=null)
     {
         var json = eval('(' + str + ')');
@@ -17,7 +17,11 @@ function load_finish(json)
 {
     livecode = json;
 
-    $("#livecodeinfo").html(livecode.info);
+    $(document).attr("title",livecode.title);
+    setWXTitle(livecode.title);
+
+
+    // $("#livecodeinfo").html(livecode.info);
 
     var codeList = getCodeList(livecode);
     var detailList = getDetailList(livecode);
@@ -48,8 +52,6 @@ function load_finish(json)
     $("#livecode_detail").html(str);
 
 
-    $(document).attr("title",livecode.title);
-    setWXTitle(livecode.title);
 
     // if(livecode.phone!=null)
     // {
@@ -83,6 +85,12 @@ function load_finish(json)
     // $("#livecode_info").html(livecode.info);
     //
 
+}
+
+
+function joinQun()
+{
+    window.location.href = ("./person.html");
 }
 
 

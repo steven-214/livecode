@@ -4,7 +4,7 @@ function load()
     var tag = getQueryString("tag");
     loadLiveCode(tag,load_finish);
 }
-
+//res.v-cd.cn/livecode/index.html?tag=77be75c10871f70747ecfd2883884a1b
 var livecode;
 function load_finish(json)
 {
