@@ -3,12 +3,14 @@ load();
 function load()
 {
     var str = getLiveCode();
-    // alert(str);
-    // mydebug("llll:::::::::::"+str);
     if(str!=null)
     {
         var json = eval('(' + str + ')');
         load_finish(json);
+    }
+    else
+    {
+        window.location.href = ("./index.html");
     }
 }
 
@@ -23,7 +25,6 @@ function load_finish(json)
 
     // $("#livecodeinfo").html(livecode.info);
 
-    var codeList = getCodeList(livecode);
     var detailList = getDetailList(livecode);
 
 
@@ -51,7 +52,28 @@ function load_finish(json)
     });
     $("#livecode_detail").html(str);
 
+    if(livecode.bmg!=null)
+    {
+        var audioPlayer = document.getElementById("livecode_bgm");
+        // var str = "<source src=\""+livecode.bmg+"\" type=\"audio/mpeg\" />\n";
+        // $("#livecode_bgm").html(str);
+        // var audio = document.createElement("audio");
+        audioPlayer.src = livecode.bmg;
+        audioPlayer.loop = true;
+        audioPlayer.addEventListener("canplaythrough",
+            function() {
+            alert("okokok");
+                audioPlayer.play();
+            },
+            false);
+        audioPlayer.load();
 
+
+        // audioPlayer.addEventListener("canplay", function(){//监听audio是否加载完毕，如果加载完毕，则读取audio播放时间
+        //     audioPlayer.play();
+        // });
+
+    }
 
     // if(livecode.phone!=null)
     // {

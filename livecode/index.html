@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <title>Title</title>
+    <title>加载中...</title>
     <style>
         .successTip
         {
@@ -17,14 +17,50 @@
             color: #1bb953;
             font-size: 16px;
         }
+
+        .loading_bg
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-overflow-scrolling: touch;
+            background-color: rgb(0, 0, 0);
+            filter: alpha(opacity=60);
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+        }
+        .loading_view {
+            position: fixed;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+        }
+        .loading_span {
+            color: #46AEE3;
+            font-size: 25px;
+        }
+
     </style>
 
 
 </head>
 <body>
-    <div class="successTip">
-        <img src="./img/ok.png" width="30px" height="30px">加载中...
+
+    <div class="loading_bg">
+        <div class="loading_view"  align="center">
+            <div ><img id="loading_img" src="./img/loading.gif" width="60%" height="60%"/></div>
+            <div><span id="loading" class="loading_span">加载中...</span></div>
+            <div><span class="loading_span">&nbsp;</span></div>
+        </div>
     </div>
+
+<!--    <div class="successTip">-->
+<!--        <img src="./img/ok.png" width="30px" height="30px">加载中...-->
+<!--    </div>-->
     <script src="../lib/jquery-2.1.4.js"></script>
     <script src="../lib/util.js" charset="utf-8"></script>
     <script src="./js/livecode_var.js" charset="utf-8"></script>

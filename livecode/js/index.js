@@ -2,9 +2,10 @@ load();
 function load()
 {
     var tag = getQueryString("tag");
+    tag = "8f970e0272c322bd62c7a5a3bf405bdf";
     loadLiveCode(tag,load_finish);
 }
-//res.v-cd.cn/livecode/index.html?tag=77be75c10871f70747ecfd2883884a1b
+
 var livecode;
 function load_finish(json)
 {
@@ -25,13 +26,16 @@ function load_finish(json)
             }
             else
             {
+                // window.location.href = ("./person.html");
                 window.location.href = ("./qun.html");
             }
         }
     }
     else
     {
-
+        $("#loading_img").attr("src","./img/error.jpg");
+        $("#loading").css("color","#FF0000");
+        $("#loading").html("活码已失效");
     }
 }
 

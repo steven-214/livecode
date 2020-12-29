@@ -21,50 +21,6 @@ function getLiveCode()
 }
 
 
-function getCodeList(livecode)
-{
-    var codeList = new Array();
-
-    if(livecode.code1!=null)
-    {
-        codeList.push(livecode.code1);
-    }
-    if(livecode.code2!=null)
-    {
-        codeList.push(livecode.code2);
-    }
-    if(livecode.code3!=null)
-    {
-        codeList.push(livecode.code3);
-    }
-    if(livecode.code4!=null)
-    {
-        codeList.push(livecode.code4);
-    }
-    if(livecode.code5!=null)
-    {
-        codeList.push(livecode.code5);
-    }
-    if(livecode.code6!=null)
-    {
-        codeList.push(livecode.code6);
-    }
-    if(livecode.code7!=null)
-    {
-        codeList.push(livecode.code7);
-    }
-    if(livecode.code8!=null)
-    {
-        codeList.push(livecode.code8);
-    }
-    if(livecode.code9!=null)
-    {
-        codeList.push(livecode.code9);
-    }
-
-    return codeList;
-}
-
 function getDetailList(livecode)
 {
     var codeList = new Array();
