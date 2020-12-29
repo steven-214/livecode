@@ -62,7 +62,7 @@ function load_finish(json)
         audioPlayer.loop = true;
         audioPlayer.addEventListener("canplaythrough",
             function() {
-            alert("okokok");
+            // alert("okokok");
                 audioPlayer.play();
             },
             false);
