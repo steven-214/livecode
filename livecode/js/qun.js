@@ -1,7 +1,26 @@
-load();
+var audio;
 
-function load()
+function loadPage()
 {
+    audio = document.getElementById('livecode_bgm');
+    initPlayAuto();
+    var hiddenProperty = 'hidden' in document ? 'hidden' :
+        'webkitHidden' in document ? 'webkitHidden' :
+            'mozHidden' in document ? 'mozHidden' :
+                null;
+    var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+    var onVisibilityChange = function(){
+        if (!document[hiddenProperty]) {
+            if(!sessionStorage.bgmusic||sessionStorage.bgmusic=='play'){
+                audio.play();
+            }
+        }else{
+            audio.pause();
+        }
+    }
+    document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+
+
     var str = getLiveCode();
     if(str!=null)
     {
@@ -18,6 +37,37 @@ var livecode;
 function load_finish(json)
 {
     livecode = json;
+
+
+
+    if(livecode.bmg!=null)
+    {
+        // var str = "<source src=\""+livecode.bmg+"\" type=\"audio/mpeg\" />\n";
+        // $("#livecode_bgm").html(str);
+        // var audio = document.createElement("audio");
+        audio.src = livecode.bmg;
+        audio.loop = true;
+        playBgMusic(true);
+        // audio.addEventListener("canplaythrough",
+        //     function() {
+        //     // alert("okokok");
+        //         audioPlayer.play();
+        //     },
+        //     false);
+        // audioPlayer.load();
+
+
+        // audioPlayer.addEventListener("canplay", function(){//监听audio是否加载完毕，如果加载完毕，则读取audio播放时间
+        //     audioPlayer.play();
+        // });
+
+    }
+
+
+
+
+
+
 
     $(document).attr("title",livecode.title);
     setWXTitle(livecode.title);
@@ -48,32 +98,11 @@ function load_finish(json)
 
     var str = "";
     detailList.forEach(detail=>{
-        str += "<img src='"+detail+"'  width='98%'>";
+        str += "<img src='"+detail+"'  width='98%'><br/>";
     });
     $("#livecode_detail").html(str);
 
-    if(livecode.bmg!=null)
-    {
-        var audioPlayer = document.getElementById("livecode_bgm");
-        // var str = "<source src=\""+livecode.bmg+"\" type=\"audio/mpeg\" />\n";
-        // $("#livecode_bgm").html(str);
-        // var audio = document.createElement("audio");
-        audioPlayer.src = livecode.bmg;
-        audioPlayer.loop = true;
-        audioPlayer.addEventListener("canplaythrough",
-            function() {
-            // alert("okokok");
-                audioPlayer.play();
-            },
-            false);
-        audioPlayer.load();
 
-
-        // audioPlayer.addEventListener("canplay", function(){//监听audio是否加载完毕，如果加载完毕，则读取audio播放时间
-        //     audioPlayer.play();
-        // });
-
-    }
 
     // if(livecode.phone!=null)
     // {
@@ -110,9 +139,77 @@ function load_finish(json)
 }
 
 
+
+function initPlayAuto()
+{
+//----------页面初始化------------
+    if(sessionStorage.bgmusic=='pause'){
+        playBgMusic(false);
+    }else{
+        playBgMusic(true);
+        //----------处理自动播放------------
+        //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+        document.addEventListener('DOMContentLoaded', function () {
+            function audioAutoPlay() {
+                playBgMusic(true);
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    playBgMusic(true);
+                }, false);
+            }
+            audioAutoPlay();
+        });
+        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+        function audioAutoPlay() {
+            playBgMusic(true);
+            document.removeEventListener('touchstart',audioAutoPlay);
+        }
+        document.addEventListener('touchstart', audioAutoPlay);
+    }
+}
+
+
+//----------处理页面激活------------
+
+
+
+//---------背景音乐开关----------
+function triggerBgMusic(){
+    if(!sessionStorage.bgmusic||sessionStorage.bgmusic=='play'){
+        playBgMusic(false);
+    }else{
+        playBgMusic(true);
+    }
+}
+//---------音乐播放和暂停----------
+function playBgMusic(val){
+    if(val){
+        audio.play();
+        sessionStorage.bgmusic='play';
+        document.getElementById('status').innerHTML='正在播放';
+    }else{
+        audio.pause();
+        sessionStorage.bgmusic='pause';
+        document.getElementById('status').innerHTML='停止播放了';
+    }
+}
+
+
+
+
+function liveCodePhone()
+{
+    if(livecode==null)
+    {
+        return;
+    }
+    callPhone(livecode.phone);
+}
+
+
+
 function joinQun()
 {
-    window.location.href = ("./person.html");
+    window.location.href = ("./person.html?rand="+Math.random());
 }
 
 

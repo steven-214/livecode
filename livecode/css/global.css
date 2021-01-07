@@ -1,0 +1,517 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*公共样式*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0 }
+table { border-collapse:collapse; border-spacing:0}
+fieldset, img { border:0 }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal}
+ol, ul { list-style:none; display:block }
+ol, ul, li, dl, dd, dt{display:block}
+caption, th { text-align:left; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal}
+q:before, q:after { content:'' }
+abbr, acronym { border:0}
+input{outline: none}
+textarea{ resize: none; outline: none}
+html,body{height:100%}
+html{ font-size: 20px}
+body{font-size:0.6rem!important; color:#333; line-height: 1rem;font-family:Arial, Helvetica,sans-serif;-webkit-text-size-adjust:none; background:#6c86fd}
+.clear:after,#wrap:after{ visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; overflow: hidden }
+input, select {outline: none; -webkit-appearance: none; border-radius: 0; border: none;  background: none}
+a{color:#333; text-decoration:none; outline:0}
+a:visited{color:#333}
+
+@media screen and (min-width:600px){
+    html{ background:#e6e6e6}
+    body{font-family:微软雅黑; width:600px; margin:0 auto}
+}
+
+.ftb{ font-weight: bold !important}
+.ft6{ font-size: .6rem !important}
+.tdt2{text-indent: 2em !important}
+
+.fl{ float:left !important}
+.fr{ float:right !important}
+.tl{ text-align: left !important}
+.tc{ text-align: center !important}
+.tr{ text-align: right !important}
+.marc{ margin: 0 auto !important}
+.r{ position: absolute; top:0; right:0 }
+
+/*文字高亮*/
+.light-red{ color: #ff5722}/*红色高亮*/
+.light-grey{ color: #999}/*灰色高亮*/
+.light-green{ color: #259b24}/*绿色高亮*/
+.light-blue{ color: #244EA4}/*蓝色高亮*/
+
+/*边距*/
+.mrt6{ margin-top: .6rem !important}
+.mrt1{ margin-top: 1rem !important}
+.mrt2{ margin-top: 2rem !important}
+.mrt3{ margin-top: 3rem !important}
+.mrt5{ margin-top: 5rem !important}
+
+.mrb6{ margin-bottom: .6rem !important}
+.mrb1{ margin-bottom: 1rem !important}
+.mrb2{ margin-bottom: 2rem !important}
+.mrb3{ margin-bottom: 3rem !important}
+.mrb5{ margin-bottom: 5rem !important}
+
+.mrr6{ margin-right: .6rem !important}
+.mrr1{ margin-right: 1rem !important}
+.mrr2{ margin-right: 2rem !important}
+.mrr3{ margin-right: 3rem !important}
+.mrr5{ margin-right: 5rem !important}
+
+.pdt03{ padding-top: 0.3rem !important}
+.pdt6{ padding-top: .6rem !important}
+.pdt1{ padding-top: 1rem !important}
+.pdt2{ padding-top: 2rem !important}
+.pdt3{ padding-top: 3rem !important}
+.pdt5{ padding-top: 5rem !important}
+
+.pdr03{ padding-right: 0.3rem !important}
+.pdr6{ padding-right: .6rem !important}
+.pdr1{ padding-right: 1rem !important}
+.pdr2{ padding-right: 2rem !important}
+.pdr3{ padding-right: 3rem !important}
+.pdr5{ padding-right: 5rem !important}
+
+.pdb6{ padding-bottom: .6rem !important}
+.pdb1{ padding-bottom: 1rem !important}
+.pdb2{ padding-bottom: 2rem !important}
+.pdb3{ padding-bottom: 3rem !important}
+.pdb5{ padding-bottom: 5rem !important}
+
+.pdl0{padding-left: 0 !important}
+.pdl16{padding-left: 1.6rem !important}
+.pdl36{padding-left: 3.6rem !important}
+
+.noBoder{border-bottom: none !important}
+
+.bor{padding:1rem; background:#fff; box-shadow:0 0.1rem 0.2rem rgba(0,0,0,0.05); border-radius:0.3rem}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color:#999}
+input:-moz-placeholder, textarea:-moz-placeholder {color:#999}
+input::-moz-placeholder, textarea::-moz-placeholder {color:#999}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#999}
+
+/*透明和渐变*/
+.opacity { opacity: 0.5; filter: alpha(opacity=50) }
+.gradient{
+    background:-moz-linear-gradient(top,rgba(0,0,0,0), rgba(0,0,0,.9));
+    background:-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9));
+    background:-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9));
+    background:-ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9));
+    filter:alpha(opacity=0 finishopacity=90 style=1 startx=0,starty=0,finishx=0,finishy=100) progid:DXImageTransform.Microsoft.gradient(startcolorstr='#000',endcolorstr='#000',gradientType=0);
+    -ms-filter:alpha(opacity=0 finishopacity=90 style=1 startx=0,starty=0,finishx=0,finishy=100) progid:DXImageTransform.Microsoft.gradient(startcolorstr='#000',endcolorstr='#000',gradientType=0);/*IE8*/
+}
+
+/*按钮*/
+.btn{display: inline-block; font-size: .6rem; font-weight: bold; padding: 0 .4rem; border-radius: .2rem; color: #fff}
+.btnBlueSml{ background: #244ea4}/*蓝色小按钮*/
+.btnLBlueSml{ background: #10a6e2}/*浅蓝色小按钮*/
+.btnRedSml{ background: #e21041}/*浅蓝色小按钮*/
+
+/* 评价星星 */
+.score{ font-size: .6rem}
+.score .sc,.sc .inner{overflow: hidden;display: inline-block; width: 3.2rem; height:.6rem;line-height: .6rem}
+.score .sc{ position: relative; margin: 0 .25rem; background: url("../img/starBg.png") no-repeat;background-size: 3.2rem .6rem }
+.score .inner{position: absolute; left: 0; top: 0; z-index: 1; background: url("../img/starInner.png") no-repeat;background-size: 3.2rem .6rem}
+.oneStar .inner{ left: -80%}
+.twoStar .inner{ left: -60%}
+.threeStar .inner{ left: -40%}
+.fourStar .inner{ left: -20%}
+.fiveStar .inner{ left: 0}
+
+/**page.html**/
+.pageLink{list-style:inside upper-latin}
+.pageLink a{display:block}
+.pageLink span{font-size:.5rem; color:#999}
+.pageLink li{ border-bottom:1px solid #eee; background:#fff; padding-left:.5rem; font-weight:bold; font-size:.8rem; line-height:2rem}
+.pageLink ul{list-style:inside decimal}
+.pageLink ul li{padding-left:1.5em; font-weight:normal; font-size:.7rem; line-height:1.75rem}
+.pageLink ul ul{list-style:inside lower-roman}
+.pageLink ul ul li{padding-left:3em; font-size:.6rem; line-height:1.5rem}
+.pageLink ul ul ul{list-style:inside disc}
+.pageLink ul ul ul li{padding-left:4.5em; font-size:.5rem; line-height:1.25rem}
+
+.remarks{ font-size: .7rem; height: 1.5rem; line-height: 1.5rem; font-weight: bold; padding: 0 .6rem; border-top:1px solid #dddde0; border-bottom:1px solid #dddde0; background: #eeeeea}
+/**图书列表公共样式**/
+.tempBox{ padding-bottom: 1rem}
+.tempList1{ margin-bottom: .6rem; background: #fff}
+.tempList1 li{ position: relative; height: 4rem; padding: .6rem .6rem .6rem 4.2rem; border-bottom: 1px solid #f0f2f5}
+.tempList1 li .img{ position: absolute; width: 3rem; height: 4rem; left: .6rem; top:.6rem; background:url("../img/default_img.png") no-repeat; background-size: 100%}
+.tempList1 li .img img{ display: block; width: 100%; height: 100%}
+.tempList1 li .tit{ position: relative; padding-right:3.5rem; margin-bottom: .2rem;  line-height: 1rem; font-size: .7rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList1 li .tit .icon-del{ display: inline-block; width: 1rem; height: 1rem; background: url("../img/ico_delete.png") no-repeat; background-size: 1rem}
+.tempList1 li p{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: .9rem; color: #999}
+
+.tempList2 li{ margin-bottom: .6rem; background: #fff}
+.tempList2 li .img{ padding: .6rem}
+.tempList2 li .img img{ display: block; width: 100%; height: auto}
+.tempList2 .info{ position:relative;padding: 0 .6rem .6rem .6rem}
+.tempList2 .info .tit{line-height: 1rem; font-size: .7rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList2 .info p{ color: #999}
+.tempList2 .info .icon-gps{ position: absolute; right: .6rem; top:50%; margin-top: -1.05rem; display: block; width: 2.1rem; height: 2.1rem; background:url("../img/icon_gps.png") no-repeat; background-size: 2.1rem}
+
+.tempList3{ margin-bottom: .6rem; background: #fff}
+.tempList3 li{ position: relative; height: 2.8rem; padding: .6rem .6rem .6rem 5.2rem; border-bottom: 1px solid #f0f2f5}
+.tempList3 li .img{ position: absolute; width: 4.2rem; height: 2.8rem; left: .6rem; top:.6rem; background:url("../img/default-img1.jpg") no-repeat; background-size: 100%}
+.tempList3 li .img img{ display: block; width: 100%; height: 100%}
+.tempList3 li .img .gradient{ position: absolute; left: 0; bottom:0; z-index: 5; height: 1rem; width: 4.2rem}
+.tempList3 li .img .text{ position: absolute; left: 0; bottom: 0; z-index: 6; line-height: .8rem; font-size: .6rem; width: 3.6rem; padding: 0 .3rem; color: #fff; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.tempList3 li .info{ position: relative; padding-right: 1.2rem}
+.tempList3 li .tit{ line-height: 1rem; margin-bottom: .1rem; font-size: .6rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList3 li p{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: .9rem; color: #999}
+.tempList3 li .icon-del{ position: absolute; top:50%; margin-top: -.5rem; right: 0; display: inline-block; width: 1rem; height: 1rem; background: url("../img/ico_delete.png") no-repeat; background-size: 1rem}
+
+.tempList4{ margin-bottom: .6rem; background: #fff}
+.tempList4 li{ position: relative; height: 2.4rem; padding: .6rem 4.5rem .6rem .6rem; border-bottom: 1px solid #f0f2f5}
+.tempList4 li .img{ position: absolute; width: 4.2rem; height: 2.8rem; right:.6rem; top:.6rem; background:url("../img/default-img1.jpg") no-repeat; background-size: 100%}
+.tempList4 li .img img{ display: block; width: 100%; height: 100%}
+.tempList4 li .img .gradient{ position: absolute; left: 0; bottom:0; z-index: 5; height: 1rem; width: 4.2rem}
+.tempList4 li .img .text{ position: absolute; left: 0; bottom: 0; z-index: 6; line-height: .8rem; font-size: .6rem; width: 3.6rem; padding: 0 .3rem; color: #fff; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.tempList4 li .info{ position: relative; padding-right: 1.2rem}
+.tempList4 li .tit{ line-height: 1rem; font-size: .6rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList4 li p{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: .9rem; color: #999}
+
+.tempList5{ margin-bottom: .6rem; background: #fff}
+.tempList5 li{ position: relative; height: 2rem; padding: .6rem .6rem .6rem 3rem; border-bottom: 1px solid #f0f2f5}
+.tempList5 li .img{ position: absolute; width: 2rem; height: 2rem; left: .6rem; top:.6rem; background:url("../img/default_img.png") no-repeat; background-size: 100%}
+.tempList5 li .img img{ display: block; width: 100%; height: 100%}
+.tempList5 li .tit{ position: relative; padding-right:3.5rem;  line-height: 1rem; font-size: .7rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList5 li p{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: .9rem; color: #999}
+
+.tempList6{ margin-bottom: .6rem; background: #fff}
+.tempList6 li{ position: relative; height: 2rem; padding: .6rem; border-bottom: 1px solid #f0f2f5}
+.tempList6 li .tit{ position: relative; padding-right:3.5rem;  line-height: 1rem; font-size: .7rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList6 li p{ position:relative;padding-right:3.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: .9rem; color: #999}
+
+.tempList7{ margin-bottom: .6rem; background: #fff}
+.tempList7 li{ position: relative; padding: .6rem; border-bottom: 1px solid #f0f2f5}
+.tempList7 li .tit{ line-height: 1rem; font-size: .7rem}
+.tempList7 li p{ line-height:.9rem;color: #999}
+
+.tempList8{ margin-bottom: .6rem; background: #fff}
+.tempList8 li{ position: relative; padding: .6rem 2.5rem .6rem .6rem; border-bottom: 1px solid #f0f2f5}
+.tempList8 li .icon-gps{ position: absolute; right: .6rem; top:50%; margin-top: -1.05rem; display: block; width: 2.1rem; height: 2.1rem; background:url("../img/icon_gps.png") no-repeat; background-size: 2.1rem}
+
+.tempList9{ margin-bottom: .6rem; background: #fff}
+.tempList9 li{ position: relative; padding: .6rem .6rem .6rem 3rem; border-bottom: 1px solid #f0f2f5}
+.tempList9 li .img{ position: absolute; width: 2rem; height: 2rem; left: .6rem; top:.6rem; background:url("../img/default_img.png") no-repeat; background-size: 100%}
+.tempList9 li .img img{ display: block; width: 100%; height: 100%}
+.tempList9 li .img .icon-msg{ position: absolute; right: -.2rem; top:-.2rem; width: .4rem; height: .4rem; z-index: 3; border:1px solid #fff; background:#f22c3b; border-radius: 50%}
+.tempList9 li .tit{ position: relative; padding-right:4.5rem;  line-height: 1rem; font-size: .6rem; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList9 li p{ line-height: .9rem}
+
+.tempList10{ margin-bottom: .6rem; background: #fff}
+.tempList10 li{ position: relative; padding: .6rem 3rem .6rem 3.2rem; border-bottom: 1px solid #f0f2f5}
+.tempList10 li .img{ position: absolute; width: 2rem; height: 2rem; left: .6rem; top:.6rem; background:url("../img/default_img.png") no-repeat; background-size: 100%}
+.tempList10 li .img img{ display: block; width: 100%; height: 100%}
+.tempList10 li .tit{ position: relative; line-height: 1.6rem; font-size: .7rem;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList10 li .tit .icon-del{ display: inline-block; width: 1rem; height: 1rem; background: url("../img/ico_delete.png") no-repeat; background-size: 1rem}
+.tempList10 li p{ line-height:1rem;color: #999}
+.tempList10 li .btn-hand{ position: absolute; top:.7rem; right: .6rem; display: inline-block; width:1.5rem; height: 1.5rem; background: url("../img/btn_agree.png") no-repeat; background-size: 1.5rem}
+
+.tempList11{ margin-bottom: .6rem; background: #fff}
+.tempList11 li{ position: relative; padding: .6rem 3rem .6rem 3.2rem; border-bottom: 1px solid #f0f2f5}
+.tempList11 li .img{ position: absolute; width: 2rem; height: 2rem; left: .6rem; top:.6rem; background:url("../img/default_img.png") no-repeat; background-size: 100%}
+.tempList11 li .img img{ display: block; width: 100%; height: 100%}
+.tempList11 li .tit{ position: relative; line-height: 1.6rem; font-size: .7rem;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.tempList11 li .tit .icon-del{ display: inline-block; width: 1rem; height: 1rem; background: url("../img/ico_delete.png") no-repeat; background-size: 1rem}
+.tempList11 li p{ line-height:1rem;color: #999}
+.tempList11 li .btn-hand{ position: absolute; top:.7rem; right: .6rem; display: inline-block; width:1.5rem; height: 1.5rem; background: url("../img/btn_agree.png") no-repeat; background-size: 1.5rem}
+.tempList11 li p.foot{ line-height: 1.5rem; height: 1.5rem}
+.tempList11 li .zan{ line-height: 1.5rem; display: inline-block}
+.tempList11 li .zan .icon-zan{ display: inline-block; width: .8rem; height: .8rem; margin: .1rem .5rem .35rem 0; vertical-align: middle; background:url("../img/btn-zan.png") no-repeat; background-size: .8rem}
+
+.tempList12{ margin-bottom: .6rem; background: #fff}
+.tempList12 li{ position: relative; padding: 0 .8rem; height: 2.4rem; line-height: 2.4rem; font-size: .7rem; color: #333; border-bottom: 1px solid #f0f2f5}
+.tempList12 li:last-child{ border:0}
+.tempList12 li .icon-next{ position:absolute; top:.2rem; display: block; width: 2rem; height: 2rem; background:url("../img/ico_next.png") no-repeat; background-size:2rem}
+
+.tempList13{ margin-bottom: .6rem; background: #fff}
+.tempList13 li{ position: relative; padding: 0 .6rem 0 2.6rem; height: 2.4rem; line-height: 2.4rem; font-size: .7rem; color: #333; border-bottom: 1px solid #f0f2f5}
+.tempList13 li i.icon-fe{position: absolute; left: .8rem; top: 50%; margin-top: -.75rem; display: inline-block; width: 1.5rem; height: 1.5rem; line-height: 1.5rem;  color: #fff; background: #a770cb; border-radius: 50%;}
+.tempList13 li:last-child{ border:0}
+.tempList13 li .icon-next{ position:absolute; top:.2rem; display: block; width: 2rem; height: 2rem; background:url("../img/ico_next.png") no-repeat; background-size:2rem}
+
+.tempList14{ margin-bottom: .6rem; padding: .6rem .6rem; background: #fff}
+.tempList14 ul{ display: box; display: -webkit-box}
+.tempList14 li{ width: 0%; -webkit-box-flex:1; box-flex:1}
+.tempList14 li .bookInfo{ width: 4.5rem;position: relative}
+.tempList14 li .img{ width: 4.5rem; height: 6rem; background: url("../img/default_img.png") no-repeat; background-size: 4.5rem 6rem}
+.tempList14 li .img img{ display: block; width: 100%; height: 6rem}
+.tempList14 li .bookInfo p{ font-size: .6rem; line-height: 1.5rem; text-align: left; text-overflow: ellipsis;white-space: nowrap; overflow: hidden}
+
+.tempList15{ margin-botom: .6rem; padding: .6rem .6rem; background: #fff}
+.tempList15 ul{ display: box; display: -webkit-box}
+.tempList15 li{ width: 0%; -webkit-box-flex:1; box-flex:1}
+.tempList15 li .img{ width: 5.4rem; height: 4.05rem; background: url("../img/default-img1.jpg") no-repeat; background-size: 5.4rem 4.05rem}
+.tempList15 li .img img{ display: block; width: 100%; height: 4.05rem}
+.tempList15 li .bookInfo p{ font-size: .6rem; line-height: 1.2rem; text-overflow: ellipsis;white-space: nowrap; overflow: hidden}
+.showImgLayer{ position: fixed; left: 0; top:0; z-index: 5; width: 100%; height: 100%; background: rgba(0,0,0,.4); display: none}
+.showImgLayer img{ position: absolute; left: 50%; top:50%; z-index: 6; margin-left: -40%; display: block; width: 80%; height: auto;}
+
+.tempList16{ margin-bottom: .6rem; padding: .6rem .6rem; background: #fff}
+.tempList16 ul{ display: box; display: -webkit-box}
+.tempList16 li{ width: 0%; -webkit-box-flex:1; box-flex:1}
+.tempList16 li .bookInfo{ width: 8.1rem;position: relative}
+.tempList16 li .img{ width: 8.1rem; height: 5.4rem; background: url("../img/default-img1.jpg") no-repeat; background-size:cover}
+.tempList16 li .img img{ display: block; width: 100%; height: 5.4rem}
+.tempList16 li .bookInfo p{ font-size: .6rem; line-height: 1.5rem; text-overflow: ellipsis;white-space: nowrap; overflow: hidden}
+.tempList16 li .bookInfo .icon-del{ position: absolute; top:0; right: 0; display: block; width: 1rem; height: 1rem; background: url("../img/icon-close.png") no-repeat; background-size: 1rem }
+.tempList16 li .bookInfo .icon-type{ position: absolute; top:0; left: 0; display: inline-block; padding: .1rem .2rem; font-size: .6rem; color: #fff; border-radius: 0 0 .15rem 0}
+.tempList16 li .bookInfo .icon-yellow{ background-color: #35bf48}
+.tempList16 li .bookInfo .icon-orange{ background-color: #bfa035}
+.tempList16 li .bookInfo .mask{ position: absolute; left: 0;top:4.2rem; z-index:2;width: 100%; height: 1.2rem; line-height: 1.0rem; background-color: rgba(0,0,0,.6)}
+.tempList16 li .bookInfo .footer{ width: 7.5rem; padding: 0 .3rem; line-height: 1.2rem; position: absolute; left: 0; top:4.2rem; z-index: 3; font-size: .6rem; color: #fff}
+.tempList16 li .bookInfo .icon-eye{ display: inline-block; padding-left: 1.2rem; height: 1.2rem; line-height: 1.2rem; background: url("../img/icon-eye.png") left center no-repeat; background-size: 1rem}
+
+.tempList17{ background: #fff; margin-bottom: .5rem; border-top:1px solid #ddd}
+.tempList17:first-child{ border-top:none}
+.tempList17 h3{ height: 2rem; line-height: 2rem; font-size: .8rem; text-align: center; border-bottom: 1px solid #ddd}
+.tempList17 ul{ display: box;display: -webkit-box; border-bottom: 1px solid #ededed}
+.tempList17 ul:last-child{ border-bottom: 1px solid #ddd}
+.tempList17 li{ width: 0%;-webkit-box-flex:1; box-flex:1; text-align: center; padding: .6rem 0; border-right: 1px solid #ededed}
+.tempList17 li:last-child{ border-right: none}
+.tempList17 li img{ display: block; width: 1.5rem; height: 1.5rem; margin: 0 auto .5rem}
+
+/*标题公共样式*/
+.tempTit1{font-size: .7rem; background-color: #fff; line-height: 2.4rem; border-bottom: 1px solid #dddde0; padding: 0 0 0 .6rem; position: relative}
+.tempTit1 .next{ display:inline-block; width: 2.4rem; height: 2.4rem;background: url("../img/ico_next.png") no-repeat; background-size: 2.4rem}
+.tempTit1 .icoTit{display:inline-block; width:.8rem; height: .8rem;background: url("../img/ico_Tit.png") no-repeat; background-size: .8rem; border-radius: .8rem; position: absolute; top:50%; left: .6rem; margin-top: -.4rem}
+.tempTit1 span{font-size: .6rem; color: #999;margin-left: .6rem}
+.tempTit1 .more{float: right; font-size: .6rem; color: #999;width: 2.4rem; text-align: center;}
+
+.tempTit2{font-size: .7rem; background-color: #fff; height: 2.4rem; border-bottom: 1px solid #dddde0; padding: .6rem; position: relative}
+.tempTit2 .next{ display:inline-block; width: 2.4rem; height: 2.4rem;background: url("../img/ico_next.png") no-repeat; background-size: 2.4rem}
+.tempTit2 .imgTit{width: 2.4rem; height: 2.4rem;  position: absolute;position: absolute; top:.6rem; left: .6rem}
+.tempTit2 .imgTit img{width: 100%; height: 100%; border-radius: 50%}
+.tempTit2 .r{top:.6rem}
+.tempTit2 h2{font-weight: bold; width: 12rem; white-space:nowrap; text-overflow:ellipsis; overflow: hidden; margin-bottom: .2rem}
+.tempTit2 p{font-size: .6rem; color: #999}
+.tempTit2 .btnLike{display:inline-block; width: 2.4rem; height: 2.4rem;background: url("../img/btn_like_active.png") no-repeat; background-size: 2.4rem}
+
+.tempTit3{background-color: #fff; border-bottom: 1px solid #dddde0; padding:.6rem}
+.tempTit3 h1{font-size: .8rem; line-height: 1.2rem; text-align: center}
+.tempTit3 p{font-size: .6rem; color: #999}
+
+.tempTit4{font-size: .7rem; background-color: #fff; line-height: 1.5rem; border-bottom: 1px solid #dddde0; padding: 0 0 0 .6rem; position: relative}
+
+/*内容页公共样式*/
+.tempCon{background-color: #fff;}
+.tempCon .bookFocus{height:10rem; position:relative; background:#000; overflow:hidden}
+.tempCon .bookFocus .blur{width:24rem; height:32rem; position:absolute; left:-3rem; top:-11rem}
+.tempCon .bookFocus .blur img{width:100%; height:100%; filter: blur(2rem); -webkit-filter:blur(2rem); opacity:.9}
+.tempCon .bookFocus .imgFocus{width:6rem; height:8rem; position:absolute; top:1rem; left:6rem; z-index:2; box-shadow:0 .3rem .6rem rgba(0,0,0,.25)}
+.tempCon .bookFocus .imgFocus img{width:100%; height:100%}
+.tempCon .conTxt{padding:.6rem}
+.tempCon .conTxt p{font-size: .6rem; line-height: 1rem; margin-bottom: .6rem}
+.tempCon .conTxt p:last-child{ margin-bottom: 0}
+.tempCon .conImg1,.conImg2{width: 100%; text-align: center}
+.tempCon .conImg1 img{width: 100%; height: auto; display: block;margin: 0 auto}
+.tempCon .conImg2 img{width:auto; height: 12rem; display: block;margin: 0 auto}
+.tempCon .conImg1 span,.conImg2 span{display: block; padding: .3rem 0}
+
+/*tab页公共样式*/
+.tempTab1{background: #fff; font-size: 0.7rem}
+.tempTab1 ul{display: box; display: -webkit-box}
+.tempTab1 ul li{-webkit-box-flex: 1; box-flex: 1; line-height: 2.4rem; text-align: center; border-bottom: 2px solid #fff}
+.tempTab1 ul li.current{border-bottom: 2px solid #244ea4; color:#244ea4; font-weight: bold }
+
+.tempTab2{background: #fff; font-size: 0.7rem;position: relative; padding-right: 2.4rem}
+.tempTab2 ul{display: box; display: -webkit-box}
+.tempTab2 ul li{-webkit-box-flex: 1; box-flex: 1; line-height: 2.4rem; text-align: center; border-bottom: 2px solid #fff}
+.tempTab2 ul li.current{border-bottom: 2px solid #244ea4; color:#244ea4; font-weight: bold }
+.tempTab2 .icoHistory{width: 1rem; height:1rem; text-align:center;display: block;background: url("../img/ico_history.png") no-repeat; background-size: 1rem 1rem;position: absolute; right: .6rem; top:.7rem }
+
+.tempTab3{background: #fff; font-size: 0.7rem; overflow: hidden;}
+.tempTab3 ul{white-space: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;}
+.tempTab3 ul li{display: inline-block; line-height: 2.4rem; padding: 0 .4rem;}
+.tempTab3 ul li.current{border-bottom: 2px solid #244ea4; color:#244ea4; font-weight: bold }
+
+.tempTab4{background: #fff; font-size: 0.7rem}
+.tempTab4 ul{display: box; display: -webkit-box}
+.tempTab4 ul li{-webkit-box-flex: 1; box-flex: 1; line-height: 2.4rem; text-align: center; border-bottom: 2px solid #fff}
+.tempTab4 .selBox{ display: inline-block; padding-right: 1.2rem; background: url("../img/sel.png") right center no-repeat; background-size: 1rem auto}
+.tempTab4 .selBox select{ display: inline-block; height: 2.4rem; line-height: 2.4rem; font-size: .7rem}
+
+/*搜索框公共样式*/
+.tempSearch1{background-color: #0091ea;padding: .5rem .6rem}
+.tempSearch1 .searchBox{position: relative;padding: 0 .5rem 0 2rem; height: 1.8rem; background: #fff; border-radius: .25rem}
+.tempSearch1 .icoSearch{width: 1.8rem; height: 1.8rem; background: url("../img/ico_search.png") no-repeat; background-size:1.8rem 1.8rem; position: absolute; left: 0; top: 0; display: block; text-align: center; line-height: 2.1rem}
+.tempSearch1 .searchBox input{width: 100%; padding: .4rem 0; height: 1rem; line-height: 1rem; color: #333; font-size: .7rem}
+
+.tempSearch2{background-color: #0091ea;padding: .5rem .6rem}
+.tempSearch2 .searchBox{width:12rem;position: relative;padding: 0 .5rem 0 2rem; height: 1.8rem; background: #fff; border-radius: .25rem}
+.tempSearch2 .icoSearch{width: 1.8rem; height: 1.8rem; background: url("../img/ico_search.png") no-repeat; background-size:1.8rem 1.8rem; position: absolute; left: 0; top: 0; display: block; text-align: center; line-height: 2.1rem}
+.tempSearch2 .searchBox input{width: 100%; padding: .4rem 0; height: 1rem; line-height: 1rem; color: #333; font-size: .7rem; border: none;}
+.tempSearch2 .btnSearch{height: 1.8rem; line-height: 1.8rem;  font-size: 0.8rem; color: #fff; float: right}
+
+.tempSearch3{background-color: #fff;padding: .5rem .6rem}
+.tempSearch3 .searchBox{width:12rem;position: relative;padding: 0 .5rem 0 2rem; height: 1.8rem; background-color: #f0f2f5; border-radius: .25rem}
+.tempSearch3 .icoSearch{width: 1.8rem; height: 1.8rem; background: url("../img/ico_search.png") no-repeat; background-size:1.8rem 1.8rem; position: absolute; left: 0; top: 0; display: block; text-align: center; line-height: 2.1rem}
+.tempSearch3 .searchBox input{width: 100%; padding: .4rem 0; height: 1rem; line-height: 1rem; color: #333; font-size: .7rem; border: none;}
+.tempSearch3 .btnSearch{height: 1.8rem; line-height: 1.8rem;  font-size: 0.8rem; color: #244ea4; float: right}
+
+.tempSearch4{background-color: #fff;padding: .5rem .6rem}
+.tempSearch4 .searchBox{width:13.5rem;padding: 0 .5rem; height: 1.8rem; background-color: #f0f2f5; border-radius: .25rem}
+.tempSearch4 .searchBox input{width: 100%; padding: .4rem 0; height: 1rem; line-height: 1rem; color: #333; font-size: .7rem; border: none;}
+.tempSearch4 .btnScccearch{height: 1.8rem; line-height: 1.8rem;  font-size: 0.8rem; color: #244ea4; float: right}
+
+.tempSearch5{background-color: #fff;padding: .5rem .6rem}
+.tempSearch5 .searchBox{ position:relative;width:10rem;padding: 0 .5rem 0 4rem; height: 1.8rem; background-color: #f0f2f5; border-radius: .25rem}
+.tempSearch5 .selBox{ position: absolute; left: .5rem; top:0; height: 1.8rem; line-height: 1.8rem; background: url("../img/sel.png") right center no-repeat;  width: 2.4rem; padding-right: .6rem; background-size: 1rem auto}
+.tempSearch5 .selBox select{ display: inline-block; width: 100%; height: 100%; font-size: .6rem; color: #999}
+.tempSearch5 .searchBox input{width: 100%; padding: .4rem 0; height: 1rem; line-height: 1rem; color: #333; font-size: .7rem; border: none;}
+.tempSearch5 .btnSearch{height: 1.8rem; line-height: 1.8rem;  font-size: 0.8rem; color: #244ea4; float: right}
+
+
+/*微商宠儿*/
+.topbg{width: 100%;height: 14.33rem; background: url("../img/homebj.png") no-repeat top #6c86fd; background-size: 100% auto; padding-top: 6.66rem; position: relative}
+.topbtn{background: url("../img/bannerjr.png") no-repeat; width: 8rem; height:9rem; background-size: 100% auto;  margin: 0 auto}
+.topbtn a{width: 8rem; height: 1.8rem; display: block;}
+
+.topmas{width: 17rem; height: 3.8rem; background: url("../img/xlzmbj.png") no-repeat top left; background-size: 100% auto; margin: 0 auto;}
+.topmas-left{width: 6rem; height: 3.8rem; float: left; line-height: 1.8; padding:.5rem 1.4rem }
+.topmas-left h1{font-size: .7rem; color: #fff;}
+.topmas-left p{font-size: .6rem; color: #c9e6fc;}
+.topmas-left h1 span{font-size: .9rem; color: #ffe72c;}
+.topmas-right{width: 5rem; margin-right: 1.2rem; margin-top: 1.4rem; height: 1.2rem; background: url("../img/ckzmjd.png") no-repeat; background-size: 100% auto; float: right }
+.topmas-right a{width: 5rem; height: 1.2rem; display: block;}
+
+.gudongbox{width: 17rem; border-radius: .11rem;background-color: rgb(79, 103, 240); margin:0 auto; padding: .1rem;}
+.gudongmai{width: 16.56rem; height: 6.95rem; margin: 0 auto; position: relative}
+.gudongmaijdt{position: absolute; left: .7rem; width: 15.15rem; height: .68rem; top: 3.12rem;}
+.gudongmaijdt img{height: .68rem}
+.hjgd{background: url("../img/hjtd.png")  no-repeat; background-size: 100% auto; margin-top: -0.1rem;}
+.bjgd{background: url("../img/bjtd.png") no-repeat; background-size: 100% auto; margin-top: 1rem;}
+.zsgd{background: url("../img/zstd.png")  no-repeat; background-size: 100% auto;margin-top: 1rem; margin-bottom: 2rem;}
+
+.gudongmai .zs{background: url("../img/zsico.png") no-repeat; position: absolute; background-size: 100% auto; width:3rem; height:3rem;bottom: -4rem;  left:-0.5rem;}
+
+
+.zmsm{width: 16.6rem; height: auto; overflow: hidden; border-radius: .11rem;background-color: rgb(79, 103, 240); margin:0 auto; padding: .3rem; margin-top: 1rem;padding-bottom: 1rem;}
+.zmsm .main{ width: 100%; background: #ffffff; margin-top: .5rem; position: relative }
+.zmsm .main h1{ text-align: center; padding-top: 1rem;margin-bottom: .5rem;}
+.zmsm .main h1 img{height: .71rem; width: auto}
+.zmsm .main p{color: #6c86fd; line-height: 1.8; font-size: .6rem; padding:0 .3rem .8rem .3rem; }
+.zmsm .yezico{background: url("../img/yeziico.png") no-repeat; width: 2rem; height: 2rem; background-size: 100% auto; position: absolute; right: -0.5rem; bottom: -0.5rem}
+
+.dwonbox{ width: 100%;height: auto;overflow: hidden; padding-top: 9.16rem; text-align: center}
+.dwonbox img{width:10.2rem; height: auto}
+.downbtnbox{width: 100%; height: 4rem; overflow: hidden; text-align: center; padding-top: 3.2rem;}
+.downbtnbox button{width: 6.35rem;border: none; height:2.43rem; background: url("../img/xz-button.png") no-repeat; background-size: 100% auto}
+.downtxt{width: 100%; height:14.6rem; background: url("../img/xgbg.png") no-repeat; background-size: 100% auto  }
+.downtxt h1{padding: 5rem 1rem 0rem 1rem ; color: #fff; font-size:.8rem}
+.downtxt p{padding: 1rem; line-height: 1.8; font-size: .6rem; color: #fff}
+
+.rsbg{background: url("../img/zc-bj.png") no-repeat #fff; background-size: 100% auto; width: 100%; height: auto;
+    overflow:hidden;}
+.rslogo{height: 6rem; padding-top: 8rem; margin: 0 auto; text-align:center}
+.rslogo img{height: 6rem; width: auto}
+.framebox{ padding: 1rem; height: auto; text-align: center}
+.framebox .input{width: 100%;height: 1.8rem; border-radius: .3rem;border: none; background: #e6e6e6; font-size: .6rem; color: #666}
+.framebox .bbbtn{width: 90%; border-radius: .3rem; margin-top: 1rem; height: 1.8rem; background: #6c86fd;color: #fff; line-height: 1.8rem; font-size: 1rem; border: none;}
+.viptitle{width: 100%; height: 3rem; }
+.viptitle img{width: 100%; height: 3rem;}
+.viph1{width:100%; height:1.21rem; padding-top: .8rem; text-align: left; }
+.viph1 img{height: 1.21rem; width: auto; padding-left: 1rem;}
+.vipfunction{margin: 1rem; border-radius: .2rem; background: #fff; width: 16rem; height: auto; box-sizing: border-box;overflow: hidden}
+.vipfunction ul{ display: box; display: -webkit-box; padding: .3rem .3rem}
+.vipfunction li{ width: 0%; -webkit-box-flex:1; font-size: .6rem; box-flex:1; color: #64379e; border-left: 1px #64379e solid; line-height: .7rem; margin-top: .3rem; margin-left: .3rem; padding-left: .3rem;}
+.aavip ul li{color: #ffad03; border-left: solid 1px #ffad03}
+.aauser ul li{color: #369ce4; border-left: solid 1px #369ce4}
+
+.mainbanner{ height: 10.5rem; width: 100%;}
+.mainbanner img{height: 10.5rem}
+
+.maintitle{height: 3.0rem;width:100%;background: #fff; }
+.maintitle h1{font-size: .8rem; color: #000; line-height: 1.5; text-align: left; padding-left: .6rem; padding-top: .2rem}
+.maintitle p{font-size: .6rem; color: #999999; line-height: 1; text-align: left; padding-left: .6rem; padding-top: .2rem}
+
+.mainqun{height: 2.5rem; width: 100%;background: #fff; padding-top: .2rem; line-height: 2.2rem; color: #999}
+.mainqunimg{width: 4.3rem; height: 1.85rem; float: left; padding-top: .2rem; padding-left: .6rem;}
+.mainqunimg img{width: 4.3rem; height: 1.85rem; float: left;}
+
+.mancont{width: 100%; height: auto; overflow: hidden; background: #fff; padding-top: .2rem; }
+.mancont p{color: #333;text-align: left;padding-left: .6rem;}
+.mancont img{width:16rem; height: auto;}
+.maintitleh1{font-size: .8rem; color: #000; line-height: 1.5; text-align: left;  padding-top: .2rem;padding-left: .6rem;}
+.livecode_detail
+{
+    width: 100%;
+    background: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #323232;
+    padding-left: 10px;
+}
+
+
+
+
+.lxwkw{width: 100%; height:3.6rem; background: #fff; position: fixed;z-index: 9999;left: 0; bottom: 0px; }
+.lxwkw .kfbox{width: 4.83rem; float: left; padding-top: 2.3rem; text-align: center; color: #999; height:3.6rem; background: url("../img/kefu.png")  no-repeat ;  background-position: center .8rem; background-size: 1.53rem auto; }
+.lxwkw .kfbttn {width: 12.83rem; height:3.6rem; float: right; background: #ff0000; text-align: center; line-height: 3.6rem;}
+.lxwkw .kfbttn a{width: 12.83rem; height:3.6rem; color: #fff}
+
+.jingshi{color: #57bc61;  height: 2.1rem; line-height: 2.1rem; background: url("../img/lvgou.png") no-repeat 1rem .5rem #f2fcf5; background-size: .9rem auto;padding-left: 2rem; }
+.erweima{width: 16rem; height: 16rem; background: #fff; text-align: center; padding-top: 2rem; margin: 0 auto; border: solid 1px #f5f5f5; border-radius: 5px;}
+.erweima img{ width: 14rem; height: 14rem; text-align: center; line-height: 18rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

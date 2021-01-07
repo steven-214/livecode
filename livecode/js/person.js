@@ -1,6 +1,4 @@
-load();
-
-function load()
+function loadPage()
 {
     var str = getLiveCode();
     if(str!=null)
@@ -29,8 +27,13 @@ function load_finish(json)
 
     if(livecode.phone!=null)
     {
-        $("#livecode_phone_tip").html("联系电话");
+        $("#livecode_phone_tip").html("客服电话");
         $("#livecode_phone").html(livecode.phone);
+    }
+
+    if(livecode.support==0)
+    {
+        $("#livecode_support").html("");
     }
 }
 

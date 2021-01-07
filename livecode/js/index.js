@@ -2,7 +2,7 @@ load();
 function load()
 {
     var tag = getQueryString("tag");
-    tag = "8f970e0272c322bd62c7a5a3bf405bdf";
+    // tag = "8f970e0272c322bd62c7a5a3bf405bdf";
     loadLiveCode(tag,load_finish);
 }
 
@@ -16,18 +16,18 @@ function load_finish(json)
 
         if(livecode.type==0)
         {
-            window.location.href = ("./person.html");
+            window.location.href = ("./person.html?rand="+Math.random());
         }
         else if(livecode.type==1)
         {
             if(livecode.advance==0)
             {
-                window.location.href = ("./person.html");
+                window.location.href = ("./person.html?rand="+Math.random());
             }
             else
             {
-                // window.location.href = ("./person.html");
-                window.location.href = ("./qun.html");
+                // window.location.href = ("./personBak.html");
+                window.location.href = ("./qun.html?rand="+Math.random());
             }
         }
     }
